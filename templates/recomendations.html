@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="./static/styles.css">
+
+</head>
+<body>
+    <h1>Recommendations for "{{ song.track_name }}" by {{ song.artist_name }}</h1>
+    <ul>
+        {% for rec in recommendations %}
+            <li>{{ rec.track_name }} by {{ rec.artist_name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
